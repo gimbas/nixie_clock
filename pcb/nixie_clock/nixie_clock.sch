@@ -945,7 +945,7 @@
 <wire x1="2" y1="2" x2="2" y2="-2" width="0.127" layer="21"/>
 <wire x1="2" y1="-2" x2="-2" y2="-2" width="0.127" layer="21"/>
 <wire x1="-2" y1="-2" x2="-2" y2="2" width="0.127" layer="21"/>
-<text x="-2" y="-3.381" size="0.8" layer="21" font="vector" ratio="15">&gt;NAME</text>
+<text x="-2" y="-3.381" size="0.8" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <circle x="-2.286" y="-2.286" radius="0.1" width="0.127" layer="21"/>
 </package>
 </packages>
@@ -3210,6 +3210,8 @@ temperature. Capacitance change is limited to ±15% from
 <wire x1="-1.27" y1="1.27" x2="-1.27" y2="-3.81" width="0.127" layer="21"/>
 <wire x1="-1.905" y1="3.81" x2="-1.905" y2="2.921" width="0.127" layer="21"/>
 <wire x1="1.905" y1="3.81" x2="1.905" y2="2.921" width="0.127" layer="21"/>
+<text x="-3.81" y="3.81" size="0.8" layer="21" font="vector" ratio="12" rot="R90" align="center">&gt;NAME</text>
+<text x="2.681" y="3.2" size="0.8" layer="21" font="vector" ratio="12" align="center">+</text>
 </package>
 </packages>
 <symbols>
@@ -3955,8 +3957,7 @@ temperature. Capacitance change is limited to ±15% from
 <wire x1="-0.3" y1="0" x2="-0.5" y2="0" width="0.127" layer="21"/>
 <smd name="1" x="-1.35" y="0" dx="1.2" dy="1.8" layer="1"/>
 <smd name="2" x="1.35" y="0" dx="1.2" dy="1.8" layer="1"/>
-<text x="-2.667" y="1.732" size="1.016" layer="25" ratio="18">&gt;NAME</text>
-<text x="-2.667" y="-2.321" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
+<text x="0" y="1.986" size="0.8" layer="25" font="vector" ratio="12" align="center">&gt;NAME</text>
 <wire x1="-2.3" y1="-1.2" x2="-2.3" y2="-0.8" width="0.127" layer="21"/>
 <wire x1="2.3" y1="-1.2" x2="2.3" y2="-0.8" width="0.127" layer="21"/>
 <wire x1="-2.3" y1="-1.2" x2="2.3" y2="-1.2" width="0.127" layer="21"/>
@@ -4342,7 +4343,7 @@ body 2.00 x 3.00 mm</description>
 <wire x1="5.08" y1="1.27" x2="5.08" y2="-1.27" width="0.127" layer="21"/>
 <wire x1="5.08" y1="-1.27" x2="-5.08" y2="-1.27" width="0.127" layer="21"/>
 <wire x1="-5.08" y1="-1.27" x2="-5.08" y2="1.27" width="0.127" layer="21"/>
-<text x="-5.08" y="-2.54" size="0.8" layer="21" font="vector" ratio="15">&gt;NAME</text>
+<text x="-5.08" y="-2.54" size="0.8" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <pad name="4" x="3.81" y="0" drill="1.1"/>
 </package>
 <package name="1X8_2.54">
@@ -4835,7 +4836,7 @@ Chip antenna with ground or secondary connection. Common with larger metal RF co
 <smd name="3" x="0.65" y="-1" dx="0.75" dy="0.4" layer="1" rot="R90"/>
 <smd name="4" x="0.65" y="1" dx="0.75" dy="0.4" layer="1" rot="R90"/>
 <smd name="5" x="-0.65" y="1" dx="0.75" dy="0.4" layer="1" rot="R90"/>
-<text x="-1.27" y="-2.54" size="0.8" layer="21" font="vector" ratio="15">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="0.8" layer="25" font="vector" ratio="15">&gt;NAME</text>
 <wire x1="1" y1="0.55" x2="-1" y2="0.55" width="0.127" layer="51"/>
 <wire x1="-1" y1="0.55" x2="-1" y2="-0.55" width="0.127" layer="21"/>
 <wire x1="-1" y1="-0.55" x2="1" y2="-0.55" width="0.127" layer="51"/>
@@ -4974,10 +4975,6 @@ Chip antenna with ground or secondary connection. Common with larger metal RF co
 </library>
 <library name="Utility &gt; Silkscreen">
 <packages>
-<package name="DESIGNEDINPT">
-<text x="-7.62" y="0.635" size="1" layer="21" font="vector" ratio="15">Designed in</text>
-<text x="0.635" y="0" size="1.8" layer="21" font="vector" ratio="15">Portugal</text>
-</package>
 <package name="OSHW-LOGO-S_COPPER">
 <description>&lt;h3&gt;Open-Source Hardware (OSHW) Logo - Small - Top Copper&lt;/h3&gt;
 &lt;p&gt;Exposed copper logo for open-source hardware designs.&lt;/p&gt;
@@ -5423,14 +5420,6 @@ Chip antenna with ground or secondary connection. Common with larger metal RF co
 </package>
 </packages>
 <symbols>
-<symbol name="DESIGNEDINPT">
-<text x="1.27" y="1.016" size="1.27" layer="94">Designed in
-Portugal</text>
-<wire x1="0" y1="0" x2="0" y2="5.08" width="0.254" layer="94"/>
-<wire x1="0" y1="5.08" x2="12.7" y2="5.08" width="0.254" layer="94"/>
-<wire x1="12.7" y1="5.08" x2="12.7" y2="0" width="0.254" layer="94"/>
-<wire x1="12.7" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
-</symbol>
 <symbol name="OSHW-LOGO">
 <description>&lt;h3&gt;Open-Source Hardware (OSHW) Logo&lt;/h3&gt;
 &lt;p&gt; This logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: &lt;a href="http://freedomdefined.org/OSHW"&gt;http://freedomdefined.org/OSHW&lt;/a&gt;&lt;/p&gt;
@@ -8990,18 +8979,6 @@ Portugal</text>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="DESIGNEDINPT" prefix="LOGO">
-<gates>
-<gate name="G$1" symbol="DESIGNEDINPT" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="DESIGNEDINPT">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="OSHW-LOGO" prefix="LOGO">
 <description>&lt;h3&gt;Open-Source Hardware (OSHW) Logo&lt;/h3&gt;
 &lt;p&gt; This logo indicates the piece of hardware it is found on incorporates a OSHW license and/or adheres to the definition of open source hardware found here: &lt;a href="http://freedomdefined.org/OSHW"&gt;http://freedomdefined.org/OSHW&lt;/a&gt;&lt;/p&gt;</description>
@@ -14207,7 +14184,6 @@ Portugal</text>
 <part name="GND26" library="Utility &gt; Power Symbols" deviceset="GND" device=""/>
 <part name="LOGO3" library="Utility &gt; Silkscreen" deviceset="OSHW-LOGO" device="L"/>
 <part name="LOGO6" library="Silkscreen" deviceset="HV_WARNING" device=""/>
-<part name="LOGO8" library="Utility &gt; Silkscreen" deviceset="DESIGNEDINPT" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15393,7 +15369,6 @@ Portugal</text>
 </instance>
 <instance part="LOGO3" gate="G$1" x="327.66" y="48.26" smashed="yes"/>
 <instance part="LOGO6" gate="G$1" x="353.06" y="55.88" smashed="yes"/>
-<instance part="LOGO8" gate="G$1" x="299.72" y="55.88" smashed="yes"/>
 </instances>
 <busses>
 </busses>
