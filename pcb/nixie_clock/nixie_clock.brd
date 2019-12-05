@@ -1261,6 +1261,39 @@ DO NOT TOUCH</text>
 </library>
 <library name="Connectors &gt; USB">
 <packages>
+<package name="USB-C-V">
+<pad name="A9" x="3.25" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A6" x="-0.45" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A5" x="-1.35" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A4" x="-2.3" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A1" x="-3.25" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A8" x="2.3" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="A7" x="0.45" y="0.7" drill="0.4" diameter="0.6"/>
+<pad name="SHIELD0" x="2" y="1.93" drill="0.5" shape="long" rot="R180"/>
+<wire x1="1.458" y1="1.93" x2="2.508" y2="1.93" width="0.65" layer="46"/>
+<pad name="SHIELD1" x="-2" y="1.93" drill="0.5" shape="long" rot="R180"/>
+<wire x1="-2.479" y1="1.93" x2="-1.429" y2="1.93" width="0.65" layer="46"/>
+<pad name="SHIELD2" x="-2" y="-1.93" drill="0.5" shape="long" rot="R180"/>
+<wire x1="-2.479" y1="-1.93" x2="-1.429" y2="-1.93" width="0.65" layer="46"/>
+<pad name="SHIELD3" x="2" y="-1.93" drill="0.5" shape="long" rot="R180"/>
+<wire x1="1.458" y1="-1.93" x2="2.508" y2="-1.93" width="0.65" layer="46"/>
+<pad name="B12" x="-3.25" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B7" x="0.45" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B6" x="1.35" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B5" x="2.3" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B4" x="3.25" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B9" x="-2.3" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<pad name="B8" x="-0.45" y="-0.7" drill="0.4" diameter="0.6" rot="R180"/>
+<wire x1="-2.9" y1="1.29" x2="2.9" y2="1.29" width="0.127" layer="21"/>
+<wire x1="2.9" y1="1.29" x2="4.17" y2="0.02" width="0.127" layer="21" curve="-90"/>
+<wire x1="4.17" y1="0.02" x2="4.17" y2="-0.02" width="0.127" layer="21"/>
+<wire x1="4.17" y1="-0.02" x2="2.9" y2="-1.29" width="0.127" layer="21" curve="-90"/>
+<wire x1="2.9" y1="-1.29" x2="-2.9" y2="-1.29" width="0.127" layer="21"/>
+<wire x1="-2.9" y1="-1.29" x2="-4.17" y2="-0.02" width="0.127" layer="21" curve="-90"/>
+<wire x1="-4.17" y1="-0.02" x2="-4.17" y2="0.02" width="0.127" layer="21"/>
+<wire x1="-4.17" y1="0.02" x2="-2.9" y2="1.29" width="0.127" layer="21" curve="-90"/>
+<text x="5.08" y="0" size="0.8" layer="21" font="vector" ratio="12" rot="R90" align="center">&gt;NAME</text>
+</package>
 <package name="USB-C">
 <smd name="A6" x="-0.25" y="7.251" dx="1.45" dy="0.3" layer="1" rot="R90"/>
 <smd name="B7" x="-0.75" y="7.251" dx="1.45" dy="0.3" layer="1" rot="R90"/>
@@ -4658,18 +4691,18 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <element name="C19" library="Passive Components &gt; Capacitors &gt; Multilayer Ceramic Capacitors MLCC" package="0603_WAVE" value="1u" x="32.5" y="63.6" locked="yes" smashed="yes" rot="R270">
 <attribute name="NAME" x="31.07" y="63.6" size="0.8" layer="25" font="vector" ratio="12" rot="R270" align="center"/>
 </element>
-<element name="J1" library="Connectors &gt; USB" package="USB-C" value="USB-C" x="65" y="52" locked="yes" smashed="yes">
-<attribute name="NAME" x="69.464" y="56.91" size="0.8" layer="21" font="vector" ratio="15" rot="R270"/>
+<element name="J1" library="Connectors &gt; USB" package="USB-C-V" value="USB-CVERTICAL" x="65" y="58" smashed="yes" rot="MR0">
+<attribute name="NAME" x="60.536" y="62.91" size="0.8" layer="22" font="vector" ratio="15" rot="MR270"/>
 </element>
-<element name="F1" library="Circuit Protection &gt; Resettable Fuses - PPTC" package="0805" value="" x="62" y="62.8" locked="yes" smashed="yes" rot="R270">
-<attribute name="NAME" x="62.3932" y="65.3288" size="0.8" layer="25" font="vector" ratio="12" rot="SR0" align="center"/>
-<attribute name="VALUE" x="58.4376" y="66.3306" size="2.0828" layer="27" ratio="10" rot="SR270"/>
+<element name="F1" library="Circuit Protection &gt; Resettable Fuses - PPTC" package="0805" value="" x="60.5" y="62" smashed="yes" rot="R270">
+<attribute name="NAME" x="60.8932" y="64.5288" size="0.8" layer="25" font="vector" ratio="12" rot="SR0" align="center"/>
+<attribute name="VALUE" x="56.9376" y="65.5306" size="2.0828" layer="27" ratio="10" rot="SR270"/>
 </element>
-<element name="R23" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="11k5" x="67" y="62.3" locked="yes" smashed="yes" rot="R270">
-<attribute name="NAME" x="66.97" y="64.9" size="0.8" layer="25" font="vector" ratio="12" rot="R270" align="center"/>
+<element name="R23" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="11k5" x="63" y="54.6" smashed="yes" rot="R180">
+<attribute name="NAME" x="65.6" y="54.63" size="0.8" layer="25" font="vector" ratio="12" rot="R180" align="center"/>
 </element>
-<element name="R24" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="11k5" x="64.1" y="62.3" locked="yes" smashed="yes" rot="R270">
-<attribute name="NAME" x="64.17" y="64.9" size="0.8" layer="25" font="vector" ratio="12" rot="R270" align="center"/>
+<element name="R24" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="11k5" x="67" y="54.6" smashed="yes" rot="R180">
+<attribute name="NAME" x="69.6" y="54.53" size="0.8" layer="25" font="vector" ratio="12" rot="R180" align="center"/>
 </element>
 <element name="C20" library="Passive Components &gt; Capacitors &gt; Multilayer Ceramic Capacitors MLCC" package="0603_WAVE" value="100n" x="20.01" y="60.63" locked="yes" smashed="yes" rot="R270">
 <attribute name="NAME" x="19.98" y="57.93" size="0.8" layer="25" font="vector" ratio="12" rot="R270" align="center"/>
@@ -4722,11 +4755,11 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <element name="C22" library="Passive Components &gt; Capacitors &gt; Multilayer Ceramic Capacitors MLCC" package="0603_WAVE" value="100p" x="26.9" y="85.1" locked="yes" smashed="yes" rot="R90">
 <attribute name="NAME" x="26.93" y="87.7" size="0.8" layer="25" font="vector" ratio="12" rot="R90" align="center"/>
 </element>
-<element name="D8" library="Opto-electronics &gt; LED Emitters" package="CHIPLED_0603" value="LED0603" x="59.7" y="65.6" locked="yes" smashed="yes" rot="R180">
-<attribute name="NAME" x="58.37" y="65.5" size="0.8" layer="25" font="vector" ratio="12" rot="R270" align="center"/>
+<element name="D8" library="Opto-electronics &gt; LED Emitters" package="CHIPLED_0603" value="LED0603" x="58.5" y="64.8" smashed="yes" rot="R180">
+<attribute name="NAME" x="57.17" y="64.7" size="0.8" layer="25" font="vector" ratio="12" rot="R270" align="center"/>
 </element>
-<element name="R30" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="1k" x="59.7" y="62.3" locked="yes" smashed="yes" rot="R90">
-<attribute name="NAME" x="58.43" y="62.4" size="0.8" layer="25" font="vector" ratio="12" rot="R90" align="center"/>
+<element name="R30" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="1k" x="58.5" y="61.5" smashed="yes" rot="R90">
+<attribute name="NAME" x="57.23" y="61.6" size="0.8" layer="25" font="vector" ratio="12" rot="R90" align="center"/>
 </element>
 <element name="D7" library="Opto-electronics &gt; LED Emitters" package="CHIPLED_0603" value="LED0603" x="31.9" y="78.8" locked="yes" smashed="yes" rot="R270">
 <attribute name="NAME" x="31.9" y="77.47" size="0.8" layer="25" font="vector" ratio="12" align="center"/>
@@ -4940,6 +4973,9 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <element name="U$3" library="Utility &gt; Silkscreen" package="RAFAEL_SILVA_10MM_ALT" value="" x="71" y="74.7" locked="yes" smashed="yes" rot="MR0"/>
 <element name="LOGO2" library="Utility &gt; Silkscreen" package="OSHW-LOGO-L" value="OSHW-LOGOL" x="17.7" y="60.2" locked="yes" smashed="yes" rot="MR0"/>
 <element name="LOGO7" library="Silkscreen" package="HV_WARNING" value="HV_WARNING" x="127.3" y="88.6" locked="yes" smashed="yes" rot="MR0"/>
+<element name="J6" library="Connectors &gt; USB" package="USB-C" value="USB-C" x="4.3" y="-10.3" smashed="yes">
+<attribute name="NAME" x="8.11" y="-1.664" size="0.8" layer="21" font="vector" ratio="15" rot="R180"/>
+</element>
 </elements>
 <signals>
 <signal name="N$1">
@@ -5030,8 +5066,8 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <contactref element="C3" pad="2"/>
 <contactref element="C18" pad="P$2"/>
 <contactref element="C19" pad="P$2"/>
-<contactref element="J1" pad="A1/B12"/>
-<contactref element="J1" pad="B1/A12"/>
+<contactref element="J1" pad="A1"/>
+<contactref element="J1" pad="B12"/>
 <contactref element="J1" pad="SHIELD1"/>
 <contactref element="J1" pad="SHIELD2"/>
 <contactref element="J1" pad="SHIELD3"/>
@@ -5142,8 +5178,6 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <wire x1="84.75" y1="67.1" x2="85.6" y2="67.1" width="0.2" layer="1" locked="yes"/>
 <wire x1="85.6" y1="67.1" x2="86" y2="67.5" width="0.2" layer="1" locked="yes"/>
 <wire x1="86" y1="67.5" x2="86" y2="68.1" width="0.2" layer="1" locked="yes"/>
-<wire x1="61.8" y1="59.276" x2="61.8" y2="59.8" width="0.2" layer="1" locked="yes"/>
-<wire x1="61.8" y1="59.8" x2="61.2" y2="60.4" width="0.5" layer="1" locked="yes"/>
 <via x="43" y="101" extent="1-16" drill="0.3"/>
 <via x="45" y="101" extent="1-16" drill="0.3"/>
 <via x="47" y="101" extent="1-16" drill="0.3"/>
@@ -5773,10 +5807,7 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <via x="55" y="57" extent="1-16" drill="0.3"/>
 <via x="57" y="57" extent="1-16" drill="0.3"/>
 <via x="59" y="57" extent="1-16" drill="0.3"/>
-<via x="61" y="57" extent="1-16" drill="0.3"/>
-<via x="63" y="57" extent="1-16" drill="0.3"/>
-<via x="67" y="57" extent="1-16" drill="0.3"/>
-<via x="69" y="57" extent="1-16" drill="0.3"/>
+<via x="69" y="55" extent="1-16" drill="0.3"/>
 <via x="71" y="57" extent="1-16" drill="0.3"/>
 <via x="73" y="57" extent="1-16" drill="0.3"/>
 <via x="75" y="57" extent="1-16" drill="0.3"/>
@@ -5827,9 +5858,6 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <via x="55" y="55" extent="1-16" drill="0.3"/>
 <via x="57" y="55" extent="1-16" drill="0.3"/>
 <via x="59" y="55" extent="1-16" drill="0.3"/>
-<via x="63" y="55" extent="1-16" drill="0.3"/>
-<via x="65" y="55" extent="1-16" drill="0.3"/>
-<via x="67" y="55" extent="1-16" drill="0.3"/>
 <via x="71" y="55" extent="1-16" drill="0.3"/>
 <via x="73" y="55" extent="1-16" drill="0.3"/>
 <via x="75" y="55" extent="1-16" drill="0.3"/>
@@ -6121,13 +6149,7 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <wire x1="106.9" y1="57.1" x2="99.7" y2="64.3" width="0.75" layer="16" locked="yes"/>
 <wire x1="99.7" y1="64.3" x2="63.4" y2="64.3" width="0.75" layer="16" locked="yes"/>
 <via x="63.4" y="64.3" extent="1-16" drill="0.35" locked="yes"/>
-<wire x1="63.4" y1="64.3" x2="62.5348" y2="64.3" width="0.75" layer="1" locked="yes"/>
-<wire x1="62.5348" y1="64.3" x2="62" y2="63.7652" width="0.75" layer="1" locked="yes"/>
-<wire x1="61.0348" y1="63.7652" x2="60.7" y2="64.1" width="0.2" layer="1" locked="yes"/>
-<wire x1="59.7" y1="66.35" x2="60.3" y2="66.35" width="0.2" layer="1" locked="yes"/>
-<wire x1="60.7" y1="65.95" x2="60.3" y2="66.35" width="0.2" layer="1" locked="yes"/>
-<wire x1="60.7" y1="65.95" x2="60.7" y2="64.1" width="0.2" layer="1" locked="yes"/>
-<wire x1="62" y1="63.7652" x2="61.0348" y2="63.7652" width="0.2" layer="1" locked="yes"/>
+<wire x1="58.5" y1="65.55" x2="60.8" y2="65.55" width="0.2" layer="1"/>
 <wire x1="63.4" y1="64.3" x2="47.2" y2="64.3" width="0.75" layer="16" locked="yes"/>
 <via x="47.2" y="64.3" extent="1-16" drill="0.35" locked="yes"/>
 <wire x1="47.2" y1="64.3" x2="46" y2="64.3" width="0.75" layer="1" locked="yes"/>
@@ -6156,6 +6178,10 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <wire x1="63.4" y1="70.6" x2="68.4" y2="75.6" width="0.75" layer="16" locked="yes"/>
 <via x="68.4" y="75.6" extent="1-16" drill="0.35" locked="yes"/>
 <wire x1="91" y1="68.777" x2="91.099996875" y2="68.777" width="0.2" layer="1" locked="yes"/>
+<wire x1="60.5" y1="62.9652" x2="62.0652" y2="62.9652" width="0.75" layer="1"/>
+<wire x1="62.0652" y1="62.9652" x2="63.4" y2="64.3" width="0.75" layer="1"/>
+<wire x1="62.05" y1="64.3" x2="63.4" y2="64.3" width="0.2" layer="1"/>
+<wire x1="60.8" y1="65.55" x2="62.05" y2="64.3" width="0.2" layer="1"/>
 </signal>
 <signal name="12V">
 <contactref element="D6" pad="C"/>
@@ -6617,32 +6643,35 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <via x="25.955546875" y="82.396271875" extent="1-16" drill="0.3" locked="yes"/>
 </signal>
 <signal name="N$74">
-<contactref element="J1" pad="B4/A9"/>
-<contactref element="J1" pad="A4/B9"/>
+<contactref element="J1" pad="A9"/>
+<contactref element="J1" pad="A4"/>
 <contactref element="F1" pad="2"/>
-<wire x1="62.6" y1="59.276" x2="62.6" y2="60.4" width="0.3" layer="1" locked="yes"/>
-<wire x1="62.6" y1="60.4" x2="62" y2="61" width="0.3" layer="1" locked="yes"/>
-<wire x1="62" y1="61" x2="62" y2="61.8348" width="0.3" layer="1" locked="yes"/>
-<wire x1="67.4" y1="59.276" x2="67.4" y2="58.5" width="0.3" layer="1" locked="yes"/>
-<wire x1="67.4" y1="58.5" x2="66.4" y2="57.5" width="0.3" layer="1" locked="yes"/>
-<wire x1="66.4" y1="57.5" x2="63.5906" y2="57.5" width="0.3" layer="1" locked="yes"/>
-<wire x1="63.5906" y1="57.5" x2="62.5953" y2="58.4953" width="0.3" layer="1" locked="yes"/>
-<wire x1="62.5953" y1="58.4953" x2="62.5953" y2="59.2713" width="0.3" layer="1" locked="yes"/>
-<wire x1="62.5953" y1="59.2713" x2="62.6" y2="59.276" width="0.3" layer="1" locked="yes"/>
+<contactref element="J1" pad="B4"/>
+<contactref element="J1" pad="B9"/>
+<wire x1="61.75" y1="57.3" x2="61.75" y2="58.7" width="0.5" layer="1"/>
+<wire x1="61.75" y1="58.7" x2="60.5" y2="59.95" width="0.5" layer="1"/>
+<wire x1="60.5" y1="59.95" x2="60.5" y2="61.0348" width="0.5" layer="1"/>
+<wire x1="67.3" y1="57.3" x2="67.3" y2="58.7" width="0.5" layer="1"/>
+<wire x1="67.3" y1="57.3" x2="66.606128125" y2="57.993871875" width="0.4064" layer="16"/>
+<wire x1="66.606128125" y1="57.993871875" x2="62.206128125" y2="57.993871875" width="0.4064" layer="16"/>
+<wire x1="61.75" y1="58.45" x2="61.75" y2="58.7" width="0.4064" layer="16"/>
+<wire x1="62.206128125" y1="57.993871875" x2="61.75" y2="58.45" width="0.4064" layer="16"/>
 </signal>
 <signal name="N$75">
 <contactref element="J1" pad="B5"/>
 <contactref element="R23" pad="P$2"/>
-<wire x1="66.75" y1="59.251" x2="66.75" y2="60.45" width="0.2" layer="1" locked="yes"/>
-<wire x1="66.75" y1="60.45" x2="67" y2="60.7" width="0.2" layer="1" locked="yes"/>
-<wire x1="67" y1="60.7" x2="67" y2="61.477" width="0.2" layer="1" locked="yes"/>
+<wire x1="62.7" y1="57.3" x2="62.7" y2="57.294734375" width="0.2" layer="1"/>
+<wire x1="62.7" y1="57.294734375" x2="61.673" y2="56.267734375" width="0.2" layer="1"/>
+<wire x1="61.673" y1="55.104" x2="62.177" y2="54.6" width="0.2" layer="1"/>
+<wire x1="61.673" y1="56.267734375" x2="61.673" y2="55.104" width="0.2" layer="1"/>
 </signal>
 <signal name="N$78">
 <contactref element="J1" pad="A5"/>
 <contactref element="R24" pad="P$2"/>
-<wire x1="63.75" y1="59.251" x2="63.75" y2="60.25" width="0.2" layer="1" locked="yes"/>
-<wire x1="64.1" y1="60.6" x2="64.1" y2="61.477" width="0.2" layer="1" locked="yes"/>
-<wire x1="63.75" y1="60.25" x2="64.1" y2="60.6" width="0.2" layer="1" locked="yes"/>
+<wire x1="66.35" y1="58.7" x2="66.35" y2="57.05" width="0.2" layer="1"/>
+<wire x1="66.35" y1="57.05" x2="65.6" y2="56.3" width="0.2" layer="1"/>
+<wire x1="65.6" y1="56.3" x2="65.6" y2="55.177" width="0.2" layer="1"/>
+<wire x1="65.6" y1="55.177" x2="66.177" y2="54.6" width="0.2" layer="1"/>
 </signal>
 <signal name="USB_DP">
 <contactref element="J1" pad="A6"/>
@@ -6650,46 +6679,37 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <contactref element="U2" pad="3"/>
 <wire x1="16.7" y1="61" x2="16.74" y2="61" width="0.2" layer="1" locked="yes"/>
 <wire x1="16.74" y1="61" x2="16.74" y2="62.075" width="0.2" layer="1" locked="yes"/>
-<wire x1="64.091215625" y1="63.146334375" x2="64.674515625" y2="62.563034375" width="0.2" layer="16" locked="yes"/>
-<wire x1="64.091215625" y1="63.146334375" x2="20.646334375" y2="63.146334375" width="0.2" layer="16" locked="yes"/>
+<wire x1="62.2" y1="63.146334375" x2="64.091215625" y2="63.146334375" width="0.2" layer="16" locked="yes"/>
+<wire x1="62.2" y1="63.146334375" x2="20.646334375" y2="63.146334375" width="0.2" layer="16" locked="yes"/>
 <wire x1="20.646334375" y1="63.146334375" x2="17.9" y2="60.4" width="0.2" layer="16" locked="yes"/>
 <via x="16.7" y="61" extent="1-16" drill="0.3" locked="yes"/>
 <wire x1="17.9" y1="60.4" x2="17.3" y2="60.4" width="0.2" layer="16" locked="yes"/>
 <wire x1="17.3" y1="60.4" x2="16.7" y2="61" width="0.2" layer="16" locked="yes"/>
-<wire x1="65.75" y1="59.251" x2="65.75" y2="58.204" width="0.2" layer="1" locked="yes"/>
-<wire x1="65.75" y1="58.204" x2="65.827" y2="58.127" width="0.2" layer="1" locked="yes"/>
-<via x="65.827" y="58.127" extent="1-16" drill="0.35" locked="yes"/>
-<wire x1="65.827" y1="58.127" x2="64.677" y2="59.277" width="0.2" layer="16" locked="yes"/>
-<wire x1="64.677" y1="59.277" x2="64.677" y2="60.59300625" width="0.2" layer="16" locked="yes"/>
-<via x="64.677" y="60.59300625" extent="1-16" drill="0.35" locked="yes"/>
-<wire x1="64.677" y1="60.59300625" x2="64.75" y2="60.52000625" width="0.2" layer="1" locked="yes"/>
-<wire x1="64.75" y1="60.52000625" x2="64.75" y2="59.251" width="0.2" layer="1" locked="yes"/>
-<wire x1="64.677" y1="60.59300625" x2="64.674515625" y2="60.595490625" width="0.2" layer="16" locked="yes"/>
-<wire x1="64.674515625" y1="62.563034375" x2="64.674515625" y2="60.595490625" width="0.2" layer="16" locked="yes"/>
+<wire x1="64.091215625" y1="63.146334375" x2="64.7" y2="62.53755" width="0.2" layer="16" locked="yes"/>
+<wire x1="64.7" y1="62.53755" x2="64.7" y2="60" width="0.2" layer="16"/>
+<via x="64.7" y="60" extent="1-16" drill="0.35"/>
+<wire x1="64.7" y1="60" x2="65.45" y2="59.25" width="0.2" layer="1"/>
+<wire x1="65.45" y1="59.25" x2="65.45" y2="58.7" width="0.2" layer="1"/>
+<wire x1="63.65" y1="58.95" x2="63.65" y2="57.3" width="0.2" layer="1"/>
+<wire x1="63.65" y1="58.95" x2="64.7" y2="60" width="0.2" layer="1"/>
 </signal>
 <signal name="USB_DM">
 <contactref element="J1" pad="A7"/>
 <contactref element="J1" pad="B7"/>
 <contactref element="U2" pad="4"/>
-<wire x1="65.25" y1="59.251" x2="65.25" y2="60.35" width="0.2" layer="1" locked="yes"/>
-<wire x1="65.25" y1="60.35" x2="65.5" y2="60.6" width="0.2" layer="1" locked="yes"/>
-<wire x1="64.25" y1="59.251" x2="64.25" y2="58.35" width="0.2" layer="1" locked="yes"/>
-<wire x1="64.25" y1="58.35" x2="64.4" y2="58.2" width="0.2" layer="1" locked="yes"/>
-<wire x1="64.4" y1="58.2" x2="65.090575" y2="58.2" width="0.2" layer="1" locked="yes"/>
-<wire x1="65.25" y1="58.359425" x2="65.25" y2="59.251" width="0.2" layer="1" locked="yes"/>
-<wire x1="65.090575" y1="58.2" x2="65.25" y2="58.359425" width="0.2" layer="1" locked="yes"/>
 <wire x1="17.24" y1="62.075" x2="17.24" y2="61.32245" width="0.2" layer="1" locked="yes"/>
 <wire x1="17.24" y1="61.32245" x2="17.53545" y2="61.027" width="0.2" layer="1" locked="yes"/>
 <wire x1="17.53545" y1="61.027" x2="17.93545" y2="61.027" width="0.2" layer="16" locked="yes"/>
 <wire x1="20.471425" y1="63.562975" x2="17.93545" y2="61.027" width="0.2" layer="16" locked="yes"/>
-<wire x1="65.073" y1="62.727" x2="65.073" y2="61.127" width="0.2" layer="16" locked="yes"/>
-<wire x1="65.473" y1="60.627" x2="65.473" y2="60.727" width="0.2" layer="16" locked="yes"/>
-<wire x1="65.473" y1="60.727" x2="65.073" y2="61.127" width="0.2" layer="16" locked="yes"/>
-<wire x1="65.073" y1="62.727" x2="64.237025" y2="63.562975" width="0.2" layer="16" locked="yes"/>
 <wire x1="64.237025" y1="63.562975" x2="20.471425" y2="63.562975" width="0.2" layer="16" locked="yes"/>
-<wire x1="65.473" y1="60.627" x2="65.5" y2="60.6" width="0.2" layer="1" locked="yes"/>
 <via x="17.53545" y="61.027" extent="1-16" drill="0.3" locked="yes"/>
-<via x="65.473" y="60.627" extent="1-16" drill="0.3" locked="yes"/>
+<wire x1="65.117784375" y1="60.584634375" x2="65.3" y2="60.40241875" width="0.2" layer="16"/>
+<wire x1="65.117784375" y1="62.682215625" x2="65.117784375" y2="60.584634375" width="0.2" layer="16"/>
+<wire x1="65.117784375" y1="62.682215625" x2="64.237025" y2="63.562975" width="0.2" layer="16"/>
+<wire x1="65.3" y1="60.40241875" x2="65.3" y2="59.5" width="0.2" layer="16"/>
+<wire x1="64.55" y1="58.75" x2="64.55" y2="58.7" width="0.2" layer="16"/>
+<wire x1="65.3" y1="59.5" x2="64.55" y2="58.75" width="0.2" layer="16"/>
+<wire x1="64.55" y1="58.7" x2="64.55" y2="57.3" width="0.2" layer="1"/>
 </signal>
 <signal name="N$79">
 <contactref element="U2" pad="9"/>
@@ -6855,7 +6875,7 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <signal name="N$80">
 <contactref element="R30" pad="P$2"/>
 <contactref element="D8" pad="C"/>
-<wire x1="59.7" y1="64.85" x2="59.7" y2="63.123" width="0.2" layer="1" locked="yes"/>
+<wire x1="58.5" y1="64.05" x2="58.5" y2="62.323" width="0.2" layer="1"/>
 </signal>
 <signal name="LED">
 <contactref element="D7" pad="A"/>
