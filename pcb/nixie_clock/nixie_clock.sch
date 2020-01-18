@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -14061,11 +14061,11 @@ Chip antenna with ground or secondary connection. Common with larger metal RF co
 <part name="SUPPLY18" library="Utility &gt; Power Symbols" deviceset="5V" device=""/>
 <part name="SUPPLY19" library="Utility &gt; Power Symbols" deviceset="3.3V" device=""/>
 <part name="J1" library="Connectors &gt; USB" deviceset="USB-C" device="VERTICAL" value="USB-CVERTICAL"/>
-<part name="F1" library="Circuit Protection &gt; Resettable Fuses - PPTC" deviceset="PTC" device="0805"/>
+<part name="F1" library="Circuit Protection &gt; Resettable Fuses - PPTC" deviceset="PTC" device="0805" value="500mA"/>
 <part name="SUPPLY20" library="Utility &gt; Power Symbols" deviceset="5V" device=""/>
 <part name="GND28" library="Utility &gt; Power Symbols" deviceset="GND" device=""/>
-<part name="R23" library="Passive Components &gt; Resistors &gt; Chip Resistors" deviceset="RESISTOR" device="0603" value="11k5"/>
-<part name="R24" library="Passive Components &gt; Resistors &gt; Chip Resistors" deviceset="RESISTOR" device="0603" value="11k5"/>
+<part name="R23" library="Passive Components &gt; Resistors &gt; Chip Resistors" deviceset="RESISTOR" device="0603" value="5k11"/>
+<part name="R24" library="Passive Components &gt; Resistors &gt; Chip Resistors" deviceset="RESISTOR" device="0603" value="5k11"/>
 <part name="GND29" library="Utility &gt; Power Symbols" deviceset="GND" device=""/>
 <part name="GND30" library="Utility &gt; Power Symbols" deviceset="GND" device=""/>
 <part name="C20" library="Passive Components &gt; Capacitors &gt; Multilayer Ceramic Capacitors MLCC" deviceset="MLCC" device="0603" value="100n"/>

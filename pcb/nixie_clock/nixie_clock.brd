@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.5.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="10" display="yes" altdistance="0.003125" altunitdist="mic" altunit="mm"/>
@@ -4694,14 +4694,14 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <element name="J1" library="Connectors &gt; USB" package="USB-C-V" value="USB-CVERTICAL" x="65" y="58" smashed="yes" rot="MR0">
 <attribute name="NAME" x="60.536" y="62.91" size="0.8" layer="22" font="vector" ratio="15" rot="MR270"/>
 </element>
-<element name="F1" library="Circuit Protection &gt; Resettable Fuses - PPTC" package="0805" value="" x="60.5" y="62" smashed="yes" rot="R270">
+<element name="F1" library="Circuit Protection &gt; Resettable Fuses - PPTC" package="0805" value="500mA" x="60.5" y="62" smashed="yes" rot="R270">
 <attribute name="NAME" x="60.8932" y="64.5288" size="0.8" layer="25" font="vector" ratio="12" rot="SR0" align="center"/>
 <attribute name="VALUE" x="56.9376" y="65.5306" size="2.0828" layer="27" ratio="10" rot="SR270"/>
 </element>
-<element name="R23" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="11k5" x="63" y="54.6" smashed="yes" rot="R180">
+<element name="R23" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="5k11" x="63" y="54.6" smashed="yes" rot="R180">
 <attribute name="NAME" x="65.6" y="54.63" size="0.8" layer="25" font="vector" ratio="12" rot="R180" align="center"/>
 </element>
-<element name="R24" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="11k5" x="67" y="54.6" smashed="yes" rot="R180">
+<element name="R24" library="Passive Components &gt; Resistors &gt; Chip Resistors" package="0603_WAVE" value="5k11" x="67" y="54.6" smashed="yes" rot="R180">
 <attribute name="NAME" x="69.6" y="54.53" size="0.8" layer="25" font="vector" ratio="12" rot="R180" align="center"/>
 </element>
 <element name="C20" library="Passive Components &gt; Capacitors &gt; Multilayer Ceramic Capacitors MLCC" package="0603_WAVE" value="100n" x="20.01" y="60.63" locked="yes" smashed="yes" rot="R270">
