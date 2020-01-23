@@ -3,7 +3,7 @@
 <eagle version="9.5.1">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="10" display="yes" altdistance="0.003125" altunitdist="mic" altunit="mm"/>
@@ -6748,20 +6748,20 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <contactref element="U2" pad="23"/>
 <contactref element="R34" pad="P$2"/>
 <contactref element="Q2" pad="P$2"/>
-<wire x1="15.04" y1="63.275" x2="14.525" y2="63.275" width="0.2" layer="1" locked="yes"/>
-<wire x1="14.525" y1="63.275" x2="12.803871875" y2="64.996128125" width="0.2" layer="1" locked="yes"/>
+<wire x1="15.04" y1="63.275" x2="14.225" y2="63.275" width="0.2" layer="1"/>
+<wire x1="14.225" y1="63.275" x2="12.903871875" y2="64.596128125" width="0.2" layer="1"/>
 <wire x1="8.077" y1="63.9" x2="8.35" y2="64.173" width="0.2" layer="1" locked="yes"/>
 <wire x1="8.35" y1="64.173" x2="8.35" y2="65.5" width="0.2" layer="1" locked="yes"/>
 <wire x1="8.35" y1="65.5" x2="8.35" y2="66.45" width="0.2" layer="1" locked="yes"/>
 <wire x1="8.35" y1="66.45" x2="8.3" y2="66.5" width="0.2" layer="1" locked="yes"/>
 <via x="8.3" y="66.5" extent="1-16" drill="0.3" locked="yes"/>
-<via x="12.596128125" y="64.996128125" extent="1-16" drill="0.3" locked="yes"/>
-<wire x1="12.441421875" y1="64.996128125" x2="12.596128125" y2="64.996128125" width="0.2" layer="16" locked="yes"/>
-<wire x1="11.41829375" y1="63.973" x2="12.441421875" y2="64.996128125" width="0.2" layer="16" locked="yes"/>
+<via x="12.596128125" y="64.596128125" extent="1-16" drill="0.3"/>
+<wire x1="12.041421875" y1="64.596128125" x2="12.596128125" y2="64.596128125" width="0.2" layer="16"/>
+<wire x1="11.41829375" y1="63.973" x2="12.041421875" y2="64.596128125" width="0.2" layer="16"/>
 <wire x1="8.3" y1="66.5" x2="8.3" y2="65.8" width="0.2" layer="16" locked="yes"/>
 <wire x1="10.127" y1="63.973" x2="8.3" y2="65.8" width="0.2" layer="16" locked="yes"/>
 <wire x1="10.127" y1="63.973" x2="11.41829375" y2="63.973" width="0.2" layer="16" locked="yes"/>
-<wire x1="12.596128125" y1="64.996128125" x2="12.803871875" y2="64.996128125" width="0.2" layer="1" locked="yes"/>
+<wire x1="12.596128125" y1="64.596128125" x2="12.903871875" y2="64.596128125" width="0.2" layer="1"/>
 </signal>
 <signal name="LFXTAL_P">
 <contactref element="C24" pad="P$1"/>
@@ -6909,11 +6909,11 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <wire x1="26.6" y1="77.541503125" x2="25.641503125" y2="78.5" width="0.2" layer="1" locked="yes"/>
 <wire x1="26.6" y1="77.541503125" x2="26.6" y2="77.5" width="0.2" layer="1" locked="yes"/>
 <via x="26.6" y="77.5" extent="1-16" drill="0.3" locked="yes"/>
-<wire x1="15.04" y1="64.775" x2="14.025" y2="64.775" width="0.2" layer="1" locked="yes"/>
-<wire x1="14.025" y1="64.775" x2="13.1" y2="65.7" width="0.2" layer="1" locked="yes"/>
-<wire x1="13.1" y1="65.7" x2="13.1" y2="71.7" width="0.2" layer="1" locked="yes"/>
-<wire x1="16.42726875" y1="75.02726875" x2="13.1" y2="71.7" width="0.2" layer="1" locked="yes"/>
-<wire x1="16.42726875" y1="75.02726875" x2="16.42726875" y2="75.478275" width="0.2" layer="1" locked="yes"/>
+<wire x1="15.04" y1="64.775" x2="14.025" y2="64.775" width="0.2" layer="1"/>
+<wire x1="14.025" y1="64.775" x2="13.1" y2="65.7" width="0.2" layer="1"/>
+<wire x1="13.1" y1="65.7" x2="13.1" y2="71.5753" width="0.2" layer="1"/>
+<wire x1="16.42726875" y1="74.90256875" x2="13.1" y2="71.5753" width="0.2" layer="1"/>
+<wire x1="16.42726875" y1="74.90256875" x2="16.42726875" y2="75.478275" width="0.2" layer="1"/>
 <via x="16.42726875" y="75.478275" extent="1-16" drill="0.3" locked="yes"/>
 <wire x1="16.42726875" y1="75.478275" x2="16.65154375" y2="75.254" width="0.2" layer="16" locked="yes"/>
 <wire x1="24.454" y1="76.754" x2="25.358746875" y2="77.658746875" width="0.2" layer="16" locked="yes"/>
@@ -6931,12 +6931,12 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <wire x1="26.062796875" y1="77.237203125" x2="26.6" y2="76.7" width="0.2" layer="1" locked="yes"/>
 <wire x1="24.95" y1="78.1" x2="25.520734375" y2="78.1" width="0.2" layer="1" locked="yes"/>
 <wire x1="25.520734375" y1="78.1" x2="26.062796875" y2="77.5579375" width="0.2" layer="1" locked="yes"/>
-<wire x1="15.04" y1="64.275" x2="14.917" y2="64.398" width="0.2" layer="1" locked="yes"/>
-<wire x1="14.917" y1="64.398" x2="13.93955" y2="64.398" width="0.2" layer="1" locked="yes"/>
-<wire x1="13.93955" y1="64.398" x2="12.773" y2="65.56455" width="0.2" layer="1" locked="yes"/>
-<wire x1="12.773" y1="65.56455" x2="12.773" y2="71.873" width="0.2" layer="1" locked="yes"/>
-<wire x1="15.7073375" y1="74.8073375" x2="12.773" y2="71.873" width="0.2" layer="1" locked="yes"/>
-<wire x1="15.7073375" y1="74.8073375" x2="15.7073375" y2="75.159653125" width="0.2" layer="1" locked="yes"/>
+<wire x1="15.04" y1="64.275" x2="15.015628125" y2="64.250628125" width="0.2" layer="1"/>
+<wire x1="15.015628125" y1="64.250628125" x2="13.886921875" y2="64.250628125" width="0.2" layer="1"/>
+<wire x1="13.886921875" y1="64.250628125" x2="12.6483" y2="65.48925" width="0.2" layer="1"/>
+<wire x1="12.6483" y1="65.48925" x2="12.6483" y2="71.81631875" width="0.2" layer="1"/>
+<wire x1="15.7073375" y1="74.87535625" x2="12.6483" y2="71.81631875" width="0.2" layer="1"/>
+<wire x1="15.7073375" y1="74.87535625" x2="15.7073375" y2="75.159653125" width="0.2" layer="1"/>
 <via x="15.7073375" y="75.159653125" extent="1-16" drill="0.3" locked="yes"/>
 <wire x1="16.070746875" y1="74.929253125" x2="15.93775" y2="74.929240625" width="0.2" layer="16" locked="yes"/>
 <wire x1="15.7073375" y1="75.159653125" x2="15.93775" y2="74.929240625" width="0.2" layer="16" locked="yes"/>
@@ -7227,8 +7227,8 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <via x="42.3" y="82.3" extent="1-16" drill="0.3" locked="yes"/>
 <wire x1="42.3" y1="82.3" x2="42.3" y2="81.487" width="0.2" layer="1" locked="yes"/>
 <wire x1="33.23545" y1="82.573" x2="38.827" y2="82.573" width="0.2" layer="16" locked="yes"/>
-<wire x1="42.3" y1="81.487" x2="44.642" y2="79.145" width="0.2" layer="1" locked="yes"/>
-<wire x1="44.642" y1="79.145" x2="47.185" y2="79.145" width="0.2" layer="1" locked="yes"/>
+<wire x1="42.3" y1="81.487" x2="44.642" y2="79.145" width="0.2" layer="1"/>
+<wire x1="44.642" y1="79.145" x2="47.185" y2="79.145" width="0.2" layer="1"/>
 </signal>
 <signal name="SDA">
 <contactref element="U4" pad="15"/>
@@ -7245,10 +7245,11 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <wire x1="28.45679375" y1="74.0115" x2="28.8" y2="74.35470625" width="0.2" layer="16" locked="yes"/>
 <wire x1="28.8" y1="74.35470625" x2="28.8" y2="78.6" width="0.2" layer="16" locked="yes"/>
 <wire x1="33.1" y1="82.9" x2="28.8" y2="78.6" width="0.2" layer="16" locked="yes"/>
-<wire x1="47.185" y1="77.875" x2="45.44955" y2="77.875" width="0.2" layer="1" locked="yes"/>
+<wire x1="47.185" y1="77.875" x2="45.255990625" y2="77.875" width="0.2" layer="1"/>
 <wire x1="41.477" y1="80.7" x2="40.69" y2="81.487" width="0.2" layer="1" locked="yes"/>
-<wire x1="45.44955" y1="77.875" x2="42.62455" y2="80.7" width="0.2" layer="1" locked="yes"/>
-<wire x1="42.62455" y1="80.7" x2="41.477" y2="80.7" width="0.2" layer="1" locked="yes"/>
+<wire x1="45.255990625" y1="77.875" x2="42.5160125" y2="80.614978125" width="0.2" layer="1"/>
+<wire x1="42.5160125" y1="80.614978125" x2="41.562021875" y2="80.614978125" width="0.2" layer="1"/>
+<wire x1="41.562021875" y1="80.614978125" x2="41.477" y2="80.7" width="0.2" layer="1"/>
 <wire x1="40.69" y1="81.487" x2="40.69" y2="82.29" width="0.2" layer="1" locked="yes"/>
 <wire x1="40.69" y1="82.29" x2="40.7" y2="82.3" width="0.2" layer="1" locked="yes"/>
 <via x="40.7" y="82.3" extent="1-16" drill="0.3" locked="yes"/>
@@ -8371,8 +8372,9 @@ These Design Rules have been set according to JLCPCB's capabilities for 2 layer 
 <contactref element="R6" pad="3"/>
 <contactref element="U3" pad="2"/>
 <contactref element="R44" pad="P$2"/>
-<wire x1="80.32" y1="90.2" x2="80.32" y2="88.38" width="0.2" layer="1" locked="yes"/>
-<wire x1="80.32" y1="88.38" x2="80.5" y2="88.2" width="0.2" layer="1" locked="yes"/>
+<wire x1="80.32" y1="90.2" x2="80.505859375" y2="90.014140625" width="0.2" layer="1"/>
+<wire x1="80.5" y1="88.2" x2="80.505859375" y2="88.205859375" width="0.2" layer="1"/>
+<wire x1="80.505859375" y1="90.014140625" x2="80.505859375" y2="88.205859375" width="0.2" layer="1"/>
 <via x="80.5" y="88.2" extent="1-16" drill="0.3" locked="yes"/>
 <wire x1="80.5" y1="88.2" x2="80.5" y2="71.8" width="0.2" layer="16" locked="yes"/>
 <wire x1="80.5" y1="71.8" x2="83.7" y2="68.6" width="0.2" layer="16" locked="yes"/>
