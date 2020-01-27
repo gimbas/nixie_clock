@@ -288,9 +288,11 @@ DO NOT TOUCH</text>
 <text x="29.7" y="54.8" locked="yes" size="1.5" layer="22" ratio="15" rot="MR0">Designed in Portugal</text>
 <text x="50" y="78.2" locked="yes" size="0.8" layer="21" font="vector" ratio="12" rot="R90" align="center">C12</text>
 <text x="56.1" y="78" locked="yes" size="0.8" layer="21" font="vector" ratio="12" align="center">+</text>
-<text x="75.4" y="98.3" locked="yes" size="1.778" layer="21">#0520</text>
-<text x="10.2" y="46" locked="yes" size="1.778" layer="21">#0520</text>
-<text x="92.9" y="81.6" locked="yes" size="0.8" layer="21" font="vector" rot="R90" align="center">JLCPCBJLCPCBJLCPCB</text>
+<text x="79.6" y="98.5" size="1.5" layer="21" align="center">V1.0
+#0520</text>
+<text x="92.9" y="81.6" locked="yes" size="0.8" layer="21" font="vector" rot="R90" align="center">JLCJLCJLCJLCJLCJLCJLCJLC</text>
+<text x="11.9" y="46.3" size="1.5" layer="21" align="center">V1.0
+#0520</text>
 </plain>
 <libraries>
 <library name="Passive Components &gt; Capacitors &gt; Multilayer Ceramic Capacitors MLCC">

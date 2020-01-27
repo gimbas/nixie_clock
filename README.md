@@ -1,17 +1,11 @@
 # Nixie Clock
 
-yet another nixie tube clock, esp32 wifi enabled
+yet another nixie tube clock, esp32 wifi enabled, temperature and humidity sensing, air quality sensing.
 
 ## Built With
 
 * esp-idf
 * eagle cad
-
-## Contributing
-
-Currently not looking for external contributers.
-
-Please read [CONTRIBUTING.md](//) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
@@ -21,7 +15,8 @@ See also the list of [contributors](https://github.com/gimbas/nixie_clock/graphs
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
 ## Acknowledgments
 

@@ -14131,7 +14131,7 @@ Chip antenna with ground or secondary connection. Common with larger metal RF co
 <attribute name="COMPANY" value="Gimbas"/>
 <attribute name="CREVISION" value="0.1"/>
 <attribute name="DESIGNER" value="Rafael Silva"/>
-<attribute name="LICENSE" value="MIT"/>
+<attribute name="LICENSE" value="Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)"/>
 <attribute name="LINK" value="https://github.com/gimbas/nixie_clock"/>
 </attributes>
 <variantdefs>
