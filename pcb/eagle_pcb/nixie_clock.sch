@@ -14126,6 +14126,51 @@ Chip antenna with ground or secondary connection. Common with larger metal RF co
 </deviceset>
 </devicesets>
 </library>
+<library name="Eletromechanical &gt; Buzzer">
+<packages>
+<package name="BUZZ_PIEZO_SMD">
+<wire x1="-6" y1="6" x2="-6" y2="2.5" width="0.127" layer="21"/>
+<wire x1="-6" y1="-2.4" x2="-6" y2="-6" width="0.127" layer="21"/>
+<wire x1="-6" y1="-6" x2="6" y2="-6" width="0.127" layer="21"/>
+<wire x1="6" y1="-6" x2="6" y2="-2.4" width="0.127" layer="21"/>
+<wire x1="6" y1="2.5" x2="6" y2="6" width="0.127" layer="21"/>
+<wire x1="-6" y1="6" x2="6" y2="6" width="0.127" layer="21"/>
+<smd name="1" x="-5.6" y="0.1" dx="4" dy="1.2" layer="1" rot="R90"/>
+<smd name="2" x="5.6" y="0.1" dx="4" dy="1.2" layer="1" rot="R90"/>
+</package>
+</packages>
+<symbols>
+<symbol name="BUZZ-1">
+<wire x1="-2.54" y1="5.08" x2="-2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="-2.54" y2="5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<pin name="A" x="-7.62" y="2.54" length="middle"/>
+<pin name="B" x="-7.62" y="-2.54" length="middle"/>
+<text x="-2.54" y="-7.62" size="1.27" layer="96">&gt;VALUE</text>
+<text x="-2.54" y="5.588" size="1.27" layer="95">&gt;NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="PKLCS1212E2400-R1" prefix="B" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="BUZZ-1" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="BUZZ_PIEZO_SMD">
+<connects>
+<connect gate="G$1" pin="A" pad="1"/>
+<connect gate="G$1" pin="B" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 <attribute name="COMPANY" value="Gimbas"/>
@@ -14402,6 +14447,12 @@ Chip antenna with ground or secondary connection. Common with larger metal RF co
 <part name="GND70" library="Utility &gt; Power Symbols" deviceset="GND" device=""/>
 <part name="GND71" library="Utility &gt; Power Symbols" deviceset="GND" device=""/>
 <part name="SUPPLY15" library="Utility &gt; Power Symbols" deviceset="3.3V" device=""/>
+<part name="B1" library="Eletromechanical &gt; Buzzer" deviceset="PKLCS1212E2400-R1" device=""/>
+<part name="Q8" library="Semiconductors &gt; Discrete Semiconductors &gt; Transistors &gt; Bipolar Transistors - BJT" deviceset="BC817-25" device=""/>
+<part name="R48" library="Passive Components &gt; Resistors &gt; Chip Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
+<part name="R49" library="Passive Components &gt; Resistors &gt; Chip Resistors" deviceset="RESISTOR" device="0603" value="1k"/>
+<part name="GND72" library="Utility &gt; Power Symbols" deviceset="GND" device=""/>
+<part name="SUPPLY16" library="Utility &gt; Power Symbols" deviceset="5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -16490,7 +16541,7 @@ GPIO0 determines boot mode</text>
 <wire x1="266.7" y1="251.46" x2="266.7" y2="170.18" width="0.2032" layer="97" style="longdash"/>
 <wire x1="172.72" y1="170.18" x2="172.72" y2="96.52" width="0.2032" layer="97" style="longdash"/>
 <wire x1="172.72" y1="48.26" x2="172.72" y2="-2.54" width="0.2032" layer="97" style="longdash"/>
-<wire x1="276.86" y1="35.56" x2="266.7" y2="48.26" width="0.2032" layer="97" style="longdash"/>
+<wire x1="266.7" y1="5.08" x2="266.7" y2="48.26" width="0.2032" layer="97" style="longdash"/>
 <wire x1="266.7" y1="48.26" x2="266.7" y2="96.52" width="0.2032" layer="97" style="longdash"/>
 <wire x1="266.7" y1="96.52" x2="266.7" y2="114.3" width="0.2032" layer="97" style="longdash"/>
 <wire x1="266.7" y1="114.3" x2="266.7" y2="170.18" width="0.2032" layer="97" style="longdash"/>
@@ -16987,46 +17038,68 @@ It must be pulled high to turn the ESP32 on.</text>
 <instance part="SUPPLY12" gate="G$1" x="185.42" y="88.9" smashed="yes">
 <attribute name="VALUE" x="185.42" y="91.694" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="U12" gate="G$1" x="345.44" y="99.06" smashed="yes">
-<attribute name="NAME" x="320.04" y="103.759" size="1.778" layer="95"/>
-<attribute name="VALUE" x="320.04" y="100.584" size="1.778" layer="96"/>
+<instance part="U12" gate="G$1" x="320.04" y="96.52" smashed="yes">
+<attribute name="NAME" x="294.64" y="101.219" size="1.778" layer="95"/>
+<attribute name="VALUE" x="294.64" y="98.044" size="1.778" layer="96"/>
 </instance>
-<instance part="SUPPLY13" gate="G$1" x="309.88" y="99.06" smashed="yes">
-<attribute name="VALUE" x="309.88" y="101.854" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY13" gate="G$1" x="284.48" y="96.52" smashed="yes">
+<attribute name="VALUE" x="284.48" y="99.314" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="C48" gate="G$1" x="302.26" y="88.9" smashed="yes">
-<attribute name="NAME" x="300.736" y="86.36" size="1.27" layer="95" rot="R90"/>
-<attribute name="VALUE" x="304.8" y="86.36" size="1.27" layer="96" rot="R90"/>
+<instance part="C48" gate="G$1" x="276.86" y="86.36" smashed="yes">
+<attribute name="NAME" x="275.336" y="83.82" size="1.27" layer="95" rot="R90"/>
+<attribute name="VALUE" x="279.4" y="83.82" size="1.27" layer="96" rot="R90"/>
 </instance>
-<instance part="GND67" gate="1" x="302.26" y="73.66" smashed="yes">
-<attribute name="VALUE" x="302.26" y="73.406" size="1.778" layer="96" align="top-center"/>
+<instance part="GND67" gate="1" x="276.86" y="71.12" smashed="yes">
+<attribute name="VALUE" x="276.86" y="70.866" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="R47" gate="G$1" x="309.88" y="88.9" smashed="yes" rot="R90">
-<attribute name="NAME" x="308.356" y="85.598" size="1.27" layer="95" rot="R90"/>
-<attribute name="VALUE" x="312.42" y="85.344" size="1.27" layer="96" rot="R90"/>
+<instance part="R47" gate="G$1" x="284.48" y="86.36" smashed="yes" rot="R90">
+<attribute name="NAME" x="282.956" y="83.058" size="1.27" layer="95" rot="R90"/>
+<attribute name="VALUE" x="287.02" y="82.804" size="1.27" layer="96" rot="R90"/>
 </instance>
-<instance part="GND69" gate="1" x="312.42" y="73.66" smashed="yes">
-<attribute name="VALUE" x="312.42" y="73.406" size="1.778" layer="96" align="top-center"/>
+<instance part="GND69" gate="1" x="287.02" y="71.12" smashed="yes">
+<attribute name="VALUE" x="287.02" y="70.866" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="GND68" gate="1" x="353.06" y="73.66" smashed="yes">
-<attribute name="VALUE" x="353.06" y="73.406" size="1.778" layer="96" align="top-center"/>
+<instance part="GND68" gate="1" x="327.66" y="71.12" smashed="yes">
+<attribute name="VALUE" x="327.66" y="70.866" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="U13" gate="G$1" x="337.82" y="55.88" smashed="yes">
-<attribute name="NAME" x="320.04" y="59.436" size="1.27" layer="95"/>
-<attribute name="VALUE" x="320.04" y="57.15" size="1.27" layer="96"/>
+<instance part="U13" gate="G$1" x="312.42" y="53.34" smashed="yes">
+<attribute name="NAME" x="294.64" y="56.896" size="1.27" layer="95"/>
+<attribute name="VALUE" x="294.64" y="54.61" size="1.27" layer="96"/>
 </instance>
-<instance part="C49" gate="G$1" x="304.8" y="48.26" smashed="yes">
-<attribute name="NAME" x="303.276" y="45.72" size="1.27" layer="95" rot="R90"/>
-<attribute name="VALUE" x="307.34" y="45.72" size="1.27" layer="96" rot="R90"/>
+<instance part="C49" gate="G$1" x="279.4" y="45.72" smashed="yes">
+<attribute name="NAME" x="277.876" y="43.18" size="1.27" layer="95" rot="R90"/>
+<attribute name="VALUE" x="281.94" y="43.18" size="1.27" layer="96" rot="R90"/>
 </instance>
-<instance part="GND70" gate="1" x="304.8" y="40.64" smashed="yes">
-<attribute name="VALUE" x="304.8" y="40.386" size="1.778" layer="96" align="top-center"/>
+<instance part="GND70" gate="1" x="279.4" y="38.1" smashed="yes">
+<attribute name="VALUE" x="279.4" y="37.846" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="GND71" gate="1" x="312.42" y="40.64" smashed="yes">
-<attribute name="VALUE" x="312.42" y="40.386" size="1.778" layer="96" align="top-center"/>
+<instance part="GND71" gate="1" x="287.02" y="38.1" smashed="yes">
+<attribute name="VALUE" x="287.02" y="37.846" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="SUPPLY15" gate="G$1" x="304.8" y="55.88" smashed="yes">
-<attribute name="VALUE" x="304.8" y="58.674" size="1.778" layer="96" align="bottom-center"/>
+<instance part="SUPPLY15" gate="G$1" x="279.4" y="53.34" smashed="yes">
+<attribute name="VALUE" x="279.4" y="56.134" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="B1" gate="G$1" x="365.76" y="76.2" smashed="yes">
+<attribute name="VALUE" x="363.22" y="68.58" size="1.27" layer="96"/>
+<attribute name="NAME" x="363.22" y="81.788" size="1.27" layer="95"/>
+</instance>
+<instance part="Q8" gate="G$1" x="350.52" y="60.96" smashed="yes">
+<attribute name="NAME" x="350.52" y="60.96" size="1.778" layer="95"/>
+<attribute name="VALUE" x="350.52" y="58.42" size="1.778" layer="96"/>
+</instance>
+<instance part="R48" gate="G$1" x="337.82" y="60.96" smashed="yes" rot="R180">
+<attribute name="NAME" x="341.122" y="59.436" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="341.376" y="63.5" size="1.27" layer="96" rot="R180"/>
+</instance>
+<instance part="R49" gate="G$1" x="350.52" y="76.2" smashed="yes" rot="R270">
+<attribute name="NAME" x="352.044" y="79.502" size="1.27" layer="95" rot="R270"/>
+<attribute name="VALUE" x="347.98" y="79.756" size="1.27" layer="96" rot="R270"/>
+</instance>
+<instance part="GND72" gate="1" x="350.52" y="50.8" smashed="yes">
+<attribute name="VALUE" x="350.52" y="50.546" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="SUPPLY16" gate="G$1" x="350.52" y="86.36" smashed="yes">
+<attribute name="VALUE" x="350.52" y="89.154" size="1.778" layer="96" align="bottom-center"/>
 </instance>
 </instances>
 <busses>
@@ -17068,6 +17141,17 @@ It must be pulled high to turn the ESP32 on.</text>
 <pinref part="D8" gate="G$1" pin="AN"/>
 <pinref part="SUPPLY33" gate="G$1" pin="5V"/>
 <wire x1="10.16" y1="226.06" x2="10.16" y2="228.6" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="R49" gate="G$1" pin="P$1"/>
+<wire x1="350.52" y1="81.28" x2="350.52" y2="83.82" width="0.1524" layer="91"/>
+<pinref part="B1" gate="G$1" pin="A"/>
+<wire x1="350.52" y1="83.82" x2="350.52" y2="86.36" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="78.74" x2="355.6" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="78.74" x2="355.6" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="83.82" x2="350.52" y2="83.82" width="0.1524" layer="91"/>
+<junction x="350.52" y="83.82"/>
+<pinref part="SUPPLY16" gate="G$1" pin="5V"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -17216,23 +17300,23 @@ It must be pulled high to turn the ESP32 on.</text>
 </segment>
 <segment>
 <pinref part="U12" gate="G$1" pin="VDD"/>
-<wire x1="314.96" y1="96.52" x2="309.88" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="309.88" y1="96.52" x2="309.88" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="93.98" x2="284.48" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="93.98" x2="284.48" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="SUPPLY13" gate="G$1" pin="3.3V"/>
 <pinref part="C48" gate="G$1" pin="P$1"/>
-<wire x1="302.26" y1="96.52" x2="302.26" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="302.26" y1="96.52" x2="309.88" y2="96.52" width="0.1524" layer="91"/>
-<junction x="309.88" y="96.52"/>
+<wire x1="276.86" y1="93.98" x2="276.86" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="93.98" x2="284.48" y2="93.98" width="0.1524" layer="91"/>
+<junction x="284.48" y="93.98"/>
 <pinref part="R47" gate="G$1" pin="P$2"/>
-<wire x1="309.88" y1="93.98" x2="309.88" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="284.48" y1="91.44" x2="284.48" y2="93.98" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U13" gate="G$1" pin="VDD"/>
-<wire x1="314.96" y1="53.34" x2="304.8" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="50.8" x2="279.4" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="C49" gate="G$1" pin="P$1"/>
-<wire x1="304.8" y1="53.34" x2="304.8" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="304.8" y1="53.34" x2="304.8" y2="55.88" width="0.1524" layer="91"/>
-<junction x="304.8" y="53.34"/>
+<wire x1="279.4" y1="50.8" x2="279.4" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="50.8" x2="279.4" y2="53.34" width="0.1524" layer="91"/>
+<junction x="279.4" y="50.8"/>
 <pinref part="SUPPLY15" gate="G$1" pin="3.3V"/>
 </segment>
 </net>
@@ -17480,35 +17564,40 @@ It must be pulled high to turn the ESP32 on.</text>
 </segment>
 <segment>
 <pinref part="C48" gate="G$1" pin="P$2"/>
-<wire x1="302.26" y1="86.36" x2="302.26" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="276.86" y1="83.82" x2="276.86" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="GND67" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U12" gate="G$1" pin="GND"/>
-<wire x1="314.96" y1="78.74" x2="312.42" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="78.74" x2="312.42" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="76.2" x2="287.02" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="76.2" x2="287.02" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="GND69" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U12" gate="G$1" pin="!WAKE"/>
-<wire x1="350.52" y1="83.82" x2="353.06" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="353.06" y1="83.82" x2="353.06" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="325.12" y1="81.28" x2="327.66" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="327.66" y1="81.28" x2="327.66" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="GND68" gate="1" pin="GND"/>
 <pinref part="U12" gate="G$1" pin="ADDR"/>
-<wire x1="350.52" y1="91.44" x2="353.06" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="353.06" y1="91.44" x2="353.06" y2="83.82" width="0.1524" layer="91"/>
-<junction x="353.06" y="83.82"/>
+<wire x1="325.12" y1="88.9" x2="327.66" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="327.66" y1="88.9" x2="327.66" y2="81.28" width="0.1524" layer="91"/>
+<junction x="327.66" y="81.28"/>
 </segment>
 <segment>
 <pinref part="GND70" gate="1" pin="GND"/>
 <pinref part="C49" gate="G$1" pin="P$2"/>
-<wire x1="304.8" y1="43.18" x2="304.8" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="279.4" y1="40.64" x2="279.4" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND71" gate="1" pin="GND"/>
-<wire x1="312.42" y1="43.18" x2="312.42" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="40.64" x2="287.02" y2="45.72" width="0.1524" layer="91"/>
 <pinref part="U13" gate="G$1" pin="GND"/>
-<wire x1="312.42" y1="48.26" x2="314.96" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="45.72" x2="289.56" y2="45.72" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="Q8" gate="G$1" pin="EM2"/>
+<wire x1="350.52" y1="55.88" x2="350.52" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="GND72" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$74" class="0">
@@ -17999,13 +18088,13 @@ It must be pulled high to turn the ESP32 on.</text>
 <pinref part="U1" gate="G$1" pin="(VSPIWP/HS2_CLK)GPIO22"/>
 </segment>
 <segment>
-<wire x1="350.52" y1="93.98" x2="353.06" y2="93.98" width="0.1524" layer="91"/>
-<label x="353.06" y="93.98" size="0.889" layer="95" xref="yes"/>
+<wire x1="325.12" y1="91.44" x2="327.66" y2="91.44" width="0.1524" layer="91"/>
+<label x="327.66" y="91.44" size="0.889" layer="95" xref="yes"/>
 <pinref part="U12" gate="G$1" pin="SCL"/>
 </segment>
 <segment>
-<wire x1="342.9" y1="50.8" x2="345.44" y2="50.8" width="0.1524" layer="91"/>
-<label x="345.44" y="50.8" size="0.889" layer="95" xref="yes"/>
+<wire x1="317.5" y1="48.26" x2="320.04" y2="48.26" width="0.1524" layer="91"/>
+<label x="320.04" y="48.26" size="0.889" layer="95" xref="yes"/>
 <pinref part="U13" gate="G$1" pin="SCL"/>
 </segment>
 </net>
@@ -18025,13 +18114,13 @@ It must be pulled high to turn the ESP32 on.</text>
 <pinref part="U1" gate="G$1" pin="(VSPIHD/HS2_CMD)GPIO21"/>
 </segment>
 <segment>
-<wire x1="350.52" y1="96.52" x2="353.06" y2="96.52" width="0.1524" layer="91"/>
-<label x="353.06" y="96.52" size="0.889" layer="95" xref="yes"/>
+<wire x1="325.12" y1="93.98" x2="327.66" y2="93.98" width="0.1524" layer="91"/>
+<label x="327.66" y="93.98" size="0.889" layer="95" xref="yes"/>
 <pinref part="U12" gate="G$1" pin="SDA"/>
 </segment>
 <segment>
-<wire x1="342.9" y1="53.34" x2="345.44" y2="53.34" width="0.1524" layer="91"/>
-<label x="345.44" y="53.34" size="0.889" layer="95" xref="yes"/>
+<wire x1="317.5" y1="50.8" x2="320.04" y2="50.8" width="0.1524" layer="91"/>
+<label x="320.04" y="50.8" size="0.889" layer="95" xref="yes"/>
 <pinref part="U13" gate="G$1" pin="SDA"/>
 </segment>
 </net>
@@ -18130,16 +18219,48 @@ It must be pulled high to turn the ESP32 on.</text>
 <segment>
 <pinref part="R47" gate="G$1" pin="P$1"/>
 <pinref part="U12" gate="G$1" pin="!RESET"/>
-<wire x1="314.96" y1="83.82" x2="309.88" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="81.28" x2="284.48" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$35" class="0">
 <segment>
 <pinref part="U12" gate="G$1" pin="PWM"/>
-<wire x1="314.96" y1="88.9" x2="312.42" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="289.56" y1="86.36" x2="287.02" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U12" gate="G$1" pin="SENSE"/>
-<wire x1="312.42" y1="88.9" x2="312.42" y2="91.44" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="91.44" x2="314.96" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="86.36" x2="287.02" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="287.02" y1="88.9" x2="289.56" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$38" class="0">
+<segment>
+<pinref part="B1" gate="G$1" pin="B"/>
+<wire x1="358.14" y1="73.66" x2="355.6" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="73.66" x2="355.6" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="68.58" x2="350.52" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="R49" gate="G$1" pin="P$2"/>
+<wire x1="350.52" y1="68.58" x2="350.52" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="Q8" gate="G$1" pin="C03"/>
+<wire x1="350.52" y1="66.04" x2="350.52" y2="68.58" width="0.1524" layer="91"/>
+<junction x="350.52" y="68.58"/>
+</segment>
+</net>
+<net name="N$39" class="0">
+<segment>
+<pinref part="R48" gate="G$1" pin="P$1"/>
+<pinref part="Q8" gate="G$1" pin="BA1"/>
+<wire x1="342.9" y1="60.96" x2="345.44" y2="60.96" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="BUZZER" class="0">
+<segment>
+<pinref part="R48" gate="G$1" pin="P$2"/>
+<wire x1="332.74" y1="60.96" x2="330.2" y2="60.96" width="0.1524" layer="91"/>
+<label x="330.2" y="60.96" size="0.889" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<wire x1="149.86" y1="137.16" x2="152.4" y2="137.16" width="0.1524" layer="91"/>
+<label x="152.4" y="137.16" size="0.889" layer="95" xref="yes"/>
+<pinref part="U1" gate="G$1" pin="(HS1_DATA4)GPIO16"/>
 </segment>
 </net>
 </nets>
